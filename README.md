@@ -9,7 +9,7 @@
 
 <aside class="sidebar">
 
-<img src="images/khan.jpeg" alt="My Photo" class="profile">
+<img src="images/khan.jpeg"alt="My Photo" class="profile">
 
 <h2>Abdullah Afridi</h2>
 <p>Web Developer</p>
