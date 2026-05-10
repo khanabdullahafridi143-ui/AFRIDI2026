@@ -1,434 +1,218 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Abdullah Afridi | Modern Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Curriculum - Abdullah Khan</title>
 
 <style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    scroll-behavior:smooth;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
 }
 
-body{
-    font-family:'Poppins',sans-serif;
-    background:#0f172a;
-    color:white;
-    overflow-x:hidden;
+body {
+    background: #eef2f7;
+    color: #333;
 }
 
-/* NAVBAR */
-
-nav{
-    width:100%;
-    padding:25px 10%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    position:fixed;
-    top:0;
-    left:0;
-    background:rgba(15,23,42,0.7);
-    backdrop-filter:blur(12px);
-    z-index:1000;
+/* HEADER */
+header {
+    background: #1f2a44;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
 }
 
-.logo{
-    font-size:28px;
-    font-weight:700;
-    color:#38bdf8;
+/* PROFILE IMAGE */
+.profile {
+    text-align: center;
+    margin-top: -40px;
 }
 
-nav ul{
-    display:flex;
-    list-style:none;
-    gap:30px;
+.profile img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 5px solid white;
+    object-fit: cover;
+    background: #ddd;
 }
 
-nav ul li a{
-    text-decoration:none;
-    color:white;
-    font-weight:500;
-    transition:0.3s;
+/* CONTAINER */
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
 }
 
-nav ul li a:hover{
-    color:#38bdf8;
+/* CARD */
+.card {
+    background: white;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    display: flex;
+    gap: 15px;
+    align-items: center;
 }
 
-/* HERO */
-
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    flex-direction:column;
-    text-align:center;
-    padding:120px 20px;
-    background:
-    radial-gradient(circle at top left,#2563eb33,transparent 40%),
-    radial-gradient(circle at bottom right,#06b6d433,transparent 40%);
+/* TEXT */
+.text {
+    flex: 1;
 }
 
-.hero img{
-    width:190px;
-    height:190px;
-    border-radius:50%;
-    object-fit:cover;
-    border:5px solid #38bdf8;
-    box-shadow:0 20px 50px rgba(56,189,248,0.3);
-    margin-bottom:30px;
+h2 {
+    color: #1f2a44;
+    border-left: 5px solid #00c6ff;
+    padding-left: 10px;
+    margin-bottom: 10px;
 }
 
-.hero h1{
-    font-size:80px;
-    font-weight:700;
-    margin-bottom:15px;
+ul {
+    padding-left: 20px;
 }
 
-.hero h2{
-    font-size:30px;
-    color:#94a3b8;
-    margin-bottom:25px;
+li {
+    margin: 6px 0;
 }
 
-.hero p{
-    max-width:850px;
-    font-size:22px;
-    line-height:1.8;
-    color:#cbd5e1;
-}
-
-.hero .btn{
-    margin-top:40px;
-    display:inline-block;
-    padding:18px 40px;
-    background:#38bdf8;
-    color:#0f172a;
-    text-decoration:none;
-    border-radius:50px;
-    font-weight:600;
-    transition:0.3s;
-}
-
-.hero .btn:hover{
-    transform:translateY(-5px);
-    background:white;
-}
-
-/* SECTIONS */
-
-section{
-    padding:120px 10%;
-}
-
-.section-title{
-    font-size:56px;
-    text-align:center;
-    margin-bottom:70px;
-}
-
-/* CARDS */
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:35px;
-}
-
-.card{
-    background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.08);
-    backdrop-filter:blur(15px);
-    border-radius:30px;
-    padding:40px;
-    transition:0.4s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-    background:rgba(255,255,255,0.08);
-}
-
-.card h3{
-    font-size:28px;
-    margin-bottom:20px;
-    color:#38bdf8;
-}
-
-.card p{
-    color:#cbd5e1;
-    line-height:1.9;
-    font-size:17px;
+/* IMAGE BOX */
+.card img {
+    width: 100px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    background: #ddd;
 }
 
 /* SKILLS */
-
-.skills{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-.skill{
-    padding:15px 28px;
-    border-radius:50px;
-    background:#1e293b;
-    border:1px solid #334155;
-    transition:0.3s;
-}
-
-.skill:hover{
-    background:#38bdf8;
-    color:#0f172a;
-    transform:scale(1.08);
-}
-
-/* CONTACT */
-
-.contact{
-    text-align:center;
-}
-
-.contact p{
-    font-size:22px;
-    margin-bottom:15px;
-    color:#cbd5e1;
-}
-
-/* FOOTER */
-
-.footer{
-    text-align:center;
-    padding:40px;
-    color:#94a3b8;
-    border-top:1px solid rgba(255,255,255,0.08);
+.skill {
+    background: #00c6ff;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
 }
 
 /* RESPONSIVE */
+@media (max-width: 700px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
 
-@media(max-width:900px){
-
-.hero h1{
-    font-size:50px;
+    .card img {
+        width: 100%;
+        height: 180px;
+    }
 }
 
-.hero h2{
-    font-size:22px;
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f2a44;
+    color: white;
+    margin-top: 30px;
 }
-
-.hero p{
-    font-size:18px;
-}
-
-.section-title{
-    font-size:40px;
-}
-
-nav{
-    flex-direction:column;
-    gap:20px;
-}
-
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-}
-
-}
-
 </style>
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<header>
+    <h1>Abdullah Khan</h1>
+    <p>Curriculum Vitae</p>
+</header>
 
-<nav>
+<div class="profile">
+    <img src="Abdullah2025/public/khan1.jpeg" alt="">
+</div>
 
-<div class="logo">Abdullah</div>
+<div class="container">
 
-<ul>
-<li><a href="#home">Home</a></li>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#projects">Projects</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
-
-</nav>
-
-<!-- HERO -->
-
-<section class="hero" id="home">
-
-<img src="images/khan1.jpeg">
-
-<h1>Abdullah Afridi</h1>
-
-<h2>Web Developer • Student • Creative Mind</h2>
-
-<p>
-Ciao! Sono Abdullah Afridi, uno studente appassionato di tecnologia,
-sviluppo web e design moderno. Mi piace creare siti eleganti,
-responsive e professionali.
-</p>
-
-<a href="#projects" class="btn">View Projects</a>
-
-</section>
-
-<!-- ABOUT -->
-
-<section id="about">
-
-<h2 class="section-title">About Me</h2>
-
-<div class="cards">
-
+<!-- CHI SONO -->
 <div class="card">
-<h3>Chi Sono</h3>
-
-<p>
-Ho 17 anni e vivo a Trieste. Studio informatica e cucina,
-con grande interesse per il web development e il design moderno.
-</p>
-
+    <div class="text">
+        <h2>Chi sono</h2>
+        <ul>
+            <li>17 anni</li>
+            <li>Pakistan</li>
+            <li>Vivo in Italia da 9 mesi</li>
+            <li>Trieste</li>
+        </ul>
+    </div>
+    <img src="Abdullah2025/public/ab2.jpeg" alt="">
 </div>
 
+<!-- VITA -->
 <div class="card">
-<h3>Obiettivi</h3>
-
-<p>
-Voglio migliorare le mie competenze tecnologiche,
-lavorare nel settore digitale e crescere professionalmente.
-</p>
-
+    <div class="text">
+        <h2>La mia vita in Italia</h2>
+        <ul>
+            <li>Comunità Rossetti8</li>
+            <li>Civiform (cuoco)</li>
+            <li>Enaip (HTML, Java)</li>
+            <li>Stage parrocchia Muggia</li>
+            <li>Corso italiano</li>
+        </ul>
+    </div>
+    <img src="Abdullah2025/public/ab3.jpeg" alt="">
 </div>
 
-</div>
-
-</section>
-
-<!-- SERVICES -->
-
-<section id="services">
-
-<h2 class="section-title">Services</h2>
-
-<div class="cards">
-
+<!-- ESPERIENZA -->
 <div class="card">
-<h3>Web Design</h3>
-
-<p>
-Creazione di siti moderni, responsive e professionali.
-</p>
-
+    <div class="text">
+        <h2>Esperienze lavorative</h2>
+        <ul>
+            <li>Fioraio</li>
+            <li>Operaio in fabbrica</li>
+        </ul>
+    </div>
+    <img src="Abdullah2025/public/ab4.jpeg" alt="">
 </div>
 
+<!-- COMPETENZE -->
 <div class="card">
-<h3>HTML & CSS</h3>
-
-<p>
-Sviluppo frontend con design moderno e animazioni fluide.
-</p>
-
+    <div class="text">
+        <h2>Competenze</h2>
+        <div class="skills">
+            <div class="skill">Team work</div>
+            <div class="skill">Problem solving</div>
+            <div class="skill">Computer</div>
+            <div class="skill">HTML</div>
+            <div class="skill">Java</div>
+        </div>
+    </div>
+    <img src="Abdullah2025/public/ab4.jpeg" alt="">
 </div>
 
+<!-- OBIETTIVI -->
 <div class="card">
-<h3>UI Design</h3>
-
-<p>
-Interfacce eleganti ispirate allo stile Apple e minimal.
-</p>
-
+    <div class="text">
+        <h2>Obiettivi</h2>
+        <p>
+            Migliorare l’italiano e trovare lavoro per crescere professionalmente.
+        </p>
+    </div>
+    <img src="Abdullah2025/public/ab4.jpeg" alt="">
 </div>
 
 </div>
 
-</section>
-
-<!-- PROJECTS -->
-
-<section id="projects">
-
-<h2 class="section-title">Projects</h2>
-
-<div class="cards">
-
-<div class="card">
-<h3>Portfolio Website</h3>
-
-<p>
-Sito portfolio moderno sviluppato con HTML e CSS.
-</p>
-
-</div>
-
-<div class="card">
-<h3>Church Website</h3>
-
-<p>
-Collaborazione alla creazione del sito della Parrocchia
-dei Santi Giovanni e Paolo di Muggia.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- SKILLS -->
-
-<section>
-
-<h2 class="section-title">Skills</h2>
-
-<div class="khan">
-
-<div class="skill">HTML</div>
-<div class="skill">CSS</div>
-<div class="skill">Java</div>
-<div class="skill">Responsive Design</div>
-<div class="skill">Problem Solving</div>
-<div class="skill">Team Work</div>
-
-</div>
-
-</section>
-
-<!-- CONTACT -->
-
-<section id="contact" class="contact">
-
-<h2 class="section-title">Contact</h2>
-
-<p>📍 Trieste, Italia</p>
-<p>📧 abdullah@email.com</p>
-<p>📞 +39 __________</p>
-
-</section>
-
-<!-- FOOTER -->
-
-<div class="footer">
-
-© 2026 Abdullah Afridi • Modern Portfolio Website
-
-</div>
+<footer>
+    © 2026 Abdullah Khan
+</footer>
 
 </body>
 </html>
