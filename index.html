@@ -1,115 +1,172 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Abdullah Khan - Apple Style CV</title>
+<title>Abdullah Afridi | Modern Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<link href="https://khanabdullahafridi143-ui.github.io/AFRIDI2026/">
 <style>
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
 body{
-    font-family:'Inter',sans-serif;
-    background:#f5f5f7;
-    color:#1d1d1f;
+    font-family:'Poppins',sans-serif;
+    background:#0f172a;
+    color:white;
     overflow-x:hidden;
 }
 
-/* HEADER */
+/* NAVBAR */
+
+nav{
+    width:100%;
+    padding:25px 10%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    position:fixed;
+    top:0;
+    left:0;
+    background:rgba(15,23,42,0.7);
+    backdrop-filter:blur(12px);
+    z-index:1000;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#38bdf8;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* HERO */
 
 .hero{
-    height:100vh;
+    min-height:100vh;
     display:flex;
-    align-items:center;
     justify-content:center;
-    text-align:center;
+    align-items:center;
     flex-direction:column;
-    padding:40px;
-    background:linear-gradient(to bottom,#ffffff,#f5f5f7);
+    text-align:center;
+    padding:120px 20px;
+    background:
+    radial-gradient(circle at top left,#2563eb33,transparent 40%),
+    radial-gradient(circle at bottom right,#06b6d433,transparent 40%);
 }
 
 .hero img{
-    width:170px;
-    height:170px;
+    width:190px;
+    height:190px;
     border-radius:50%;
     object-fit:cover;
+    border:5px solid #38bdf8;
+    box-shadow:0 20px 50px rgba(56,189,248,0.3);
     margin-bottom:30px;
-    box-shadow:0 20px 40px rgba(0,0,0,0.15);
 }
 
 .hero h1{
-    font-size:72px;
+    font-size:80px;
     font-weight:700;
-    letter-spacing:-2px;
+    margin-bottom:15px;
 }
 
 .hero h2{
-    font-size:28px;
-    font-weight:400;
-    color:#6e6e73;
-    margin-top:10px;
+    font-size:30px;
+    color:#94a3b8;
+    margin-bottom:25px;
 }
 
 .hero p{
-    margin-top:30px;
     max-width:850px;
     font-size:22px;
     line-height:1.8;
-    color:#444;
+    color:#cbd5e1;
 }
 
-/* SECTION */
+.hero .btn{
+    margin-top:40px;
+    display:inline-block;
+    padding:18px 40px;
+    background:#38bdf8;
+    color:#0f172a;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    transition:0.3s;
+}
 
-.section{
+.hero .btn:hover{
+    transform:translateY(-5px);
+    background:white;
+}
+
+/* SECTIONS */
+
+section{
     padding:120px 10%;
 }
 
 .section-title{
-    font-size:52px;
-    margin-bottom:60px;
-    font-weight:700;
-    letter-spacing:-1px;
+    font-size:56px;
+    text-align:center;
+    margin-bottom:70px;
 }
 
-/* GLASS CARDS */
+/* CARDS */
 
 .cards{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:30px;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:35px;
 }
 
 .card{
-    background:rgba(255,255,255,0.7);
-    backdrop-filter:blur(20px);
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.08);
+    backdrop-filter:blur(15px);
     border-radius:30px;
-    padding:35px;
-    box-shadow:0 10px 40px rgba(0,0,0,0.08);
+    padding:40px;
     transition:0.4s;
-    border:1px solid rgba(255,255,255,0.6);
 }
 
 .card:hover{
     transform:translateY(-10px);
-    box-shadow:0 20px 50px rgba(0,0,0,0.12);
+    background:rgba(255,255,255,0.08);
 }
 
 .card h3{
     font-size:28px;
     margin-bottom:20px;
+    color:#38bdf8;
 }
 
 .card p{
-    color:#555;
+    color:#cbd5e1;
     line-height:1.9;
     font-size:17px;
 }
@@ -119,65 +176,43 @@ body{
 .skills{
     display:flex;
     flex-wrap:wrap;
-    gap:18px;
+    justify-content:center;
+    gap:20px;
 }
 
 .skill{
-    background:#ffffff;
-    padding:14px 26px;
-    border-radius:40px;
-    font-weight:500;
-    box-shadow:0 5px 15px rgba(0,0,0,0.07);
+    padding:15px 28px;
+    border-radius:50px;
+    background:#1e293b;
+    border:1px solid #334155;
     transition:0.3s;
 }
 
 .skill:hover{
-    transform:scale(1.05);
+    background:#38bdf8;
+    color:#0f172a;
+    transform:scale(1.08);
 }
 
 /* CONTACT */
 
 .contact{
     text-align:center;
-    padding:120px 30px;
-    background:#ffffff;
-}
-
-.contact h2{
-    font-size:54px;
-    margin-bottom:20px;
 }
 
 .contact p{
-    color:#666;
-    font-size:20px;
+    font-size:22px;
     margin-bottom:15px;
-}
-
-.button{
-    display:inline-block;
-    margin-top:40px;
-    padding:18px 40px;
-    background:#0071e3;
-    color:white;
-    border-radius:50px;
-    text-decoration:none;
-    font-size:18px;
-    transition:0.3s;
-}
-
-.button:hover{
-    background:#0062c3;
-    transform:translateY(-3px);
+    color:#cbd5e1;
 }
 
 /* FOOTER */
 
 .footer{
     text-align:center;
-    padding:50px;
-    color:#777;
-    font-size:15px;
+    padding:40px;
+    color:#94a3b8;
+    border-top:1px solid rgba(255,255,255,0.08);
 }
 
 /* RESPONSIVE */
@@ -185,7 +220,7 @@ body{
 @media(max-width:900px){
 
 .hero h1{
-    font-size:48px;
+    font-size:50px;
 }
 
 .hero h2{
@@ -200,6 +235,16 @@ body{
     font-size:40px;
 }
 
+nav{
+    flex-direction:column;
+    gap:20px;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
 }
 
 </style>
@@ -208,164 +253,172 @@ body{
 
 <body>
 
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">Abdullah</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
 <!-- HERO -->
 
-<section class="hero">
+<section class="hero" id="home">
 
-    <img src="https://i.imgur.com/abdullah.jpeg" alt="Abdullah Khan">
+<img src="images/khan1.jpeg">
 
-    <h1>Abdullah Khan</h1>
+<h1>Abdullah Afridi</h1>
 
-    <h2>Studente • Informatica • Cucina</h2>
+<h2>Web Developer • Student • Creative Mind</h2>
 
-    <p>
-        Giovane motivato e responsabile con una forte voglia di imparare,
-        crescere professionalmente e costruire il proprio futuro attraverso
-        studio, tecnologia e lavoro.
-    </p>
+<p>
+Ciao! Sono Abdullah Afridi, uno studente appassionato di tecnologia,
+sviluppo web e design moderno. Mi piace creare siti eleganti,
+responsive e professionali.
+</p>
+
+<a href="#projects" class="btn">View Projects</a>
 
 </section>
 
 <!-- ABOUT -->
 
-<section class="section">
+<section id="about">
 
-    <h2 class="section-title">Chi Sono</h2>
+<h2 class="section-title">About Me</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
-            <h3>Profilo</h3>
+<div class="card">
+<h3>Chi Sono</h3>
 
-            <p>
-                Ho 17 anni, vengo dal Pakistan e vivo in Italia da 9 mesi.
-                Attualmente vivo a Trieste presso la Comunità Rossetti8.
-            </p>
-        </div>
+<p>
+Ho 17 anni e vivo a Trieste. Studio informatica e cucina,
+con grande interesse per il web development e il design moderno.
+</p>
 
-        <div class="card">
-            <h3>Obiettivi</h3>
+</div>
 
-            <p>
-                Il mio obiettivo è migliorare la lingua italiana,
-                trovare un lavoro stabile e crescere nel settore
-                della cucina e dell’informatica.
-            </p>
-        </div>
+<div class="card">
+<h3>Obiettivi</h3>
 
-    </div>
+<p>
+Voglio migliorare le mie competenze tecnologiche,
+lavorare nel settore digitale e crescere professionalmente.
+</p>
 
-</section>
+</div>
 
-<!-- EDUCATION -->
-
-<section class="section" style="background:#ffffff;">
-
-    <h2 class="section-title">Formazione</h2>
-
-    <div class="cards">
-
-        <div class="card">
-            <h3>Civiform</h3>
-
-            <p>
-                Corso professionale di cucina con studio delle tecniche
-                culinarie, preparazione alimentare e organizzazione della cucina.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Enaip</h3>
-
-            <p>
-                Corso di informatica con approfondimento di Java,
-                HTML e sviluppo di siti web.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Lingua Italiana</h3>
-
-            <p>
-                Corso frequentato due volte a settimana per migliorare
-                comunicazione e comprensione della lingua italiana.
-            </p>
-        </div>
-
-    </div>
+</div>
 
 </section>
 
-<!-- EXPERIENCE -->
+<!-- SERVICES -->
 
-<section class="section">
+<section id="services">
 
-    <h2 class="section-title">Esperienze</h2>
+<h2 class="section-title">Services</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <div class="card">
-            <h3>Stage Web</h3>
+<div class="card">
+<h3>Web Design</h3>
 
-            <p>
-                Collaborazione con la Parrocchia dei Santi Giovanni e Paolo
-                di Muggia per la creazione del sito web.
-            </p>
-        </div>
+<p>
+Creazione di siti moderni, responsive e professionali.
+</p>
 
-        <div class="card">
-            <h3>Fioraio</h3>
+</div>
 
-            <p>
-                Preparazione floreale, organizzazione del negozio
-                e assistenza clienti.
-            </p>
-        </div>
+<div class="card">
+<h3>HTML & CSS</h3>
 
-        <div class="card">
-            <h3>Operaio</h3>
+<p>
+Sviluppo frontend con design moderno e animazioni fluide.
+</p>
 
-            <p>
-                Esperienza in fabbrica con attività operative
-                e lavoro di squadra.
-            </p>
-        </div>
+</div>
 
-    </div>
+<div class="card">
+<h3>UI Design</h3>
+
+<p>
+Interfacce eleganti ispirate allo stile Apple e minimal.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Portfolio Website</h3>
+
+<p>
+Sito portfolio moderno sviluppato con HTML e CSS.
+</p>
+
+</div>
+
+<div class="card">
+<h3>Church Website</h3>
+
+<p>
+Collaborazione alla creazione del sito della Parrocchia
+dei Santi Giovanni e Paolo di Muggia.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
 <!-- SKILLS -->
 
-<section class="section" style="background:#ffffff;">
+<section>
 
-    <h2 class="section-title">Competenze</h2>
+<h2 class="section-title">Skills</h2>
 
-    <div class="skills">
+<div class="khan">
 
-        <div class="skill">Java</div>
-        <div class="skill">HTML</div>
-        <div class="skill">Problem Solving</div>
-        <div class="skill">Team Work</div>
-        <div class="skill">Computer Skills</div>
-        <div class="skill">Creatività</div>
-        <div class="skill">Motivazione</div>
+<div class="skill">HTML</div>
+<div class="skill">CSS</div>
+<div class="skill">Java</div>
+<div class="skill">Responsive Design</div>
+<div class="skill">Problem Solving</div>
+<div class="skill">Team Work</div>
 
-    </div>
+</div>
 
 </section>
 
 <!-- CONTACT -->
 
-<section class="contact">
+<section id="contact" class="contact">
 
-    <h2>Contatti</h2>
+<h2 class="section-title">Contact</h2>
 
-    <p>📍 Trieste, Italia</p>
-    <p>📧 abdullah@email.com</p>
-    <p>📞 +39 __________</p>
-
-    <a href="#" class="button">Download CV</a>
+<p>📍 Trieste, Italia</p>
+<p>📧 abdullah@email.com</p>
+<p>📞 +39 __________</p>
 
 </section>
 
@@ -373,7 +426,7 @@ body{
 
 <div class="footer">
 
-    Designed in Apple Style • Abdullah Khan CV
+© 2026 Abdullah Afridi • Modern Portfolio Website
 
 </div>
 
